@@ -1,16 +1,18 @@
+# Discover Godot with React JS
 
-# Discover Godot from React JS
+> Godot is a Free and open source 2D and 3D game engine. React is quite good too. Together can they deliver a killer Casino app?
 
-Godot is a Free and open source 2D and 3D game engine. React is quite good too. Together can they deliver a killer Casino app?
+## Table of Contents
 
-## Documentation
+- [node-app](./docs/node-app.md)
+- [react-app](./docs/react-app.md) 
+    - [Create React App](./docs/create-react-app.md)
 
-[Table of Contents](./docs/00_toc.md)
+More... 
 
-- [godot](./docs/godot.md) 
-- [react](./docs/react.md) 
+- [Godot](./docs/godot.md) 
+- [Hosting/Deployment](./docs/environment.md)
+    - [https://discover-godot.web.app/](discover-godot.web.app)
 
-more... 
-
-- [environment](./docs/environment.md)
-- [graphics](./docs/graphics.md)
+- [Graphics](./docs/graphics.md) 
+    SVG versus Bitmap
