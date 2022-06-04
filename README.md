@@ -4,15 +4,15 @@
 
 ## Table of Contents
 
-- [node-app](./docs/node-app.md)
 - [react-app](./docs/react-app.md) 
     - [Create React App](./docs/create-react-app.md)
+- [node-app](./docs/node-app.md)
 
-More... 
+#### More about... 
 
 - [Godot](./docs/godot.md) 
 - [Hosting/Deployment](./docs/environment.md)
-    - [https://discover-godot.web.app/](discover-godot.web.app)
-
+    - [discover-godot.web.app](https://discover-godot.web.app)
 - [Graphics](./docs/graphics.md) 
     SVG versus Bitmap
+- [Casino Slots](./docs/casino-slots.md)
