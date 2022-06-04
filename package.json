@@ -1,7 +1,7 @@
 {
   "name": "discover-godot",
   "version": "1.0.2",
-  "description": "Godot is a Free and open source 2D and 3D game engine",
+  "description": "Godot is a Free and open source 2D and 3D game engine. React is quite good too",
   "scripts": {
     "start": "$PWD/.scripts/start",
     "deploy": "firebase deploy",
