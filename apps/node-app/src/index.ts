@@ -1,23 +1,22 @@
 import * as functions from "firebase-functions";
 
 export const proxyAPI = functions.https.onRequest( async (req, response) => {
-  const baseAPIUrl = getBaseAPIUrl( req );
-  let params = req.params[0].split( "/" );
-  params = params.slice( 1, params.length);
-  const endpoint = params[0];
+  const baseUrl = getBaseAPIUrl(req);
   const {method, query} = req;
   const json = {
     request: {
       time: Date.now(),
-      baseAPIUrl,
-      endpoint,
+      baseUrl,
+      params: req.params,
       method,
       query,
     },
     response: {
-      id: "0001",
+      id: "0001wxyz",
       data: {
-        title: "Hello World game",
+        game: "Pingpong",
+        gameId: "kash12321423dliusadiuh",
+        title: "Heldafladisfj f laiuhfs ",
         subheader: "Hello World subheader",
       },
     },
@@ -27,7 +26,7 @@ export const proxyAPI = functions.https.onRequest( async (req, response) => {
 });
 // @ts-ignore
 function getBaseAPIUrl(req) {
-  let baseAPIUrl = "https://discover-godot.web.app/";
+  let baseAPIUrl = "https://discover-godot.web.app/api";
   if ( req.hostname === "localhost" ) {
     baseAPIUrl = "http://localhost:5001/discover-godot/us-central1/proxyAPI/";
   }

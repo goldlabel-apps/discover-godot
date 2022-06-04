@@ -1,89 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Discover Godot</title>
+    <meta charset="utf-8" />
     <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discover Godot</title>
 
-   
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      ul, li {
-        list-style: none;
-        padding:0;
-        margin: 0;
-      }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { 
-        color: rgb(19, 68, 72); 
-        font-weight: lighter; 
-        font-size: 16px; 
-        margin: 0 0 8px; }
-      #message h1 { 
-        font-size: 22px; 
-        font-weight: 300; 
-        color: rgba(0,0,0,0.6); 
-        margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; 
-        margin-top: 8px;
-        background: rgba(76, 151, 156, 1); 
-        text-decoration: none; 
-        color: white; 
-        padding: 16px; 
-        border-radius: 4px; 
-      }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-
-      #message .section-header {
-        margin-top: 24px;
-      }
-
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid rgba(19, 68, 72, 1); }
-      }
-    </style>
+    <meta name="theme-color" content="#000000" />
+    <meta name="description"
+      content="Godot and React JS are great at doing their own things. Together, can they deliver the Killer Casino App?"
+    />
+    <meta name="keywords"
+      content="godot, react, casino, slotmachine, killerapp"
+    />
+    
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <link rel="manifest" href="./manifest.json" />
+    
   </head>
   <body>
-    <div id="message">
-      
-      
-
-      <h1 class="section-header">Games</h1>
-      <ul>
-        <li>
-          <a target="_self" href="/games/HelloWorld/">
-            HelloWorld
-          </a>
-        </li>
-        <li>
-          <a target="_self" href="/games/CadanoX/">
-            CadanoX
-          </a>
-        </li>
-      </ul>
-      <h1 class="section-header">React</h1>
-      <ul>
-        <li>
-          <a target="_self" href="/react-app/">
-            App
-          </a>
-        </li>
-      </ul>
-      <h1 class="section-header">Node</h1>
-      <ul>
-        <li>
-          <a target="_self" href="https://us-central1-discover-godot.cloudfunctions.net/proxyAPI">
-            Proxy API
-          </a>
-        </li>
-      </ul>
-
-      <h2 class="section-header">github.com/listingslab-software/discover-godot</h2>
-
-    </div>
+    <noscript>
+      You need a LOT JavaScript to run this
+    </noscript>
+    <div id="react-app"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js')
+          .then(function(registration) {
+          }, function(err) {
+          });
+        });
+      }
+    </script>
   </body>
 </html>
