@@ -1,27 +1,28 @@
 {
   "name": "discover-godot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Godot is a Free and open source 2D and 3D game engine. React is quite good too",
   "scripts": {
     "start": "$PWD/.scripts/start",
-    "deploy": "firebase deploy",
     "lint:node": "cd ./node-app && npx eslint --ext .js,.ts . --fix",
+    "dist": "$PWD/.scripts/dist 1.0.3",
+    "deploy": "cd ./react-app && npm run build && firebase deploy",
     "test": "npm run lint:node"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/listingslab-software/discover-godot"
+  },
+  "keywords": [
+    "godot",
+    "react",
+    "casino"
+  ],
   "dependencies": {
     "nodemon": "^2.0.15"
   },
   "main": "index.mjs",
   "directories": {
     "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/listingslab-software/discover-godot.git"
-  },
-  "keywords": [
-    "godot",
-    "react",
-    "casino"
-  ]
+  }  
 }
