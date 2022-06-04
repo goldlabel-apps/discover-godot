@@ -12,33 +12,30 @@ cat >./dist/version.json <<EOF
     {
       "version": "$1",
       "games": [
-        "Pingpong", 
         "SlotMachine"
       ]
     }
 EOF
 
-
-cp ./apps/pwa/.htaccess ./dist
-cp ./apps/pwa/favicon.ico ./dist
-
 cp ./apps/react-app/build/index.html ./dist
+cp ./apps/react-app/build/.htaccess ./dist
+cp ./apps/react-app/build/favicon.ico ./dist
 cp ./apps/react-app/build/asset-manifest.json ./dist
-cp -r ./apps/react-app/build/static ./dist
+cp ./apps/react-app/build/manifest.json ./dist
+cp ./apps/react-app/build/logo32.png ./dist
+cp ./apps/react-app/build/logo192.png ./dist
+cp ./apps/react-app/build/logo512.png ./dist
+cp ./apps/react-app/build/opengraph.png ./dist
+cp ./apps/react-app/build/robots.txt ./dist
+cp ./apps/react-app/build/service-worker.js ./dist
 
-cp ./apps/pwa/logo32.png ./dist
-cp ./apps/pwa/logo192.png ./dist
-cp ./apps/pwa/logo512.png ./dist
-cp ./apps/pwa/manifest.json ./dist
-cp ./apps/pwa/opengraph.png ./dist
-cp ./apps/pwa/robots.txt ./dist
-cp ./apps/pwa/service-worker.js ./dist
-cp -r ./apps/pwa/jpg ./dist
+cp -r ./apps/react-app/build/static ./dist
+cp -r ./apps/react-app/build/jpg ./dist
 
 mkdir ./dist/games
 
-cp -r ./games/Pingpong/dist ./dist
-mv ./dist/dist ./dist/games/Pingpong
+# cp -r ./games/Pingpong/dist ./dist
+# mv ./dist/dist ./dist/games/Pingpong
 
 cp -r ./games/SlotMachine/dist ./dist
 mv ./dist/dist ./dist/games/SlotMachine

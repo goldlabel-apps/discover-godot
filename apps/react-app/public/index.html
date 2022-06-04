@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Discover Godot</title>
 
@@ -14,9 +14,8 @@
       content="godot, react, casino, slotmachine, killerapp"
     />
     
-    <link rel="apple-touch-icon" href="./logo192.png" />
-    <link rel="manifest" href="./manifest.json" />
-    
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   </head>
   <body>
     <noscript>
@@ -24,13 +23,15 @@
     </noscript>
     <div id="react-app"></div>
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js')
-          .then(function(registration) {
-          }, function(err) {
+      if (window.location.host !== "localhost:3000"){
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+            }, function(err) {
+            });
           });
-        });
+        }
       }
     </script>
   </body>
