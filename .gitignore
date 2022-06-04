@@ -1,3 +1,5 @@
 _WIP
 .DS_Store
 node_modules
+.env
+.firebase

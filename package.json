@@ -4,7 +4,9 @@
   "description": "Godot is a Free and open source 2D and 3D game engine",
   "scripts": {
     "start": "$PWD/.scripts/start",
-    "test": "echo \"All good here, sparky :)\" && exit 0"
+    "deploy": "firebase deploy",
+    "lint:node": "cd ./node-app && npx eslint --ext .js,.ts . --fix",
+    "test": "npm run lint:node"
   },
   "dependencies": {
     "nodemon": "^2.0.15"
