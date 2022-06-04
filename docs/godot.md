@@ -10,4 +10,4 @@ why use?
 advantages
 for free
 
-_vs 1.0.5_
+_vs 1.0.6_
