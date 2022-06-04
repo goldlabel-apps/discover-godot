@@ -8,6 +8,6 @@ anchor_bottom = 1.0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
-[node name="Logo512" type="Sprite" parent="."]
+[node name="pingpongball" type="Sprite" parent="."]
 position = Vector2( 509, 293 )
 texture = ExtResource( 1 )
