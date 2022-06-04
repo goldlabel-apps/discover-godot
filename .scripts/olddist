@@ -9,6 +9,7 @@ mkdir dist
 mkdir ./dist/microfrontends
 node ./packages/shared/public/files
 
+
 cat >./packages/shared/public/config.json <<EOF
     {
       "version": "$1"
@@ -51,5 +52,6 @@ mv ./dist/root-config ./dist/microfrontends/root-config
 cp -r ./packages/shared/dist ./dist
 mv ./dist/dist ./dist/shared
 mv ./dist/shared ./dist/microfrontends/shared
+
 
 echo "Distributions $1 created"
