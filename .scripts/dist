@@ -5,11 +5,16 @@ clear
 
 echo 'Creating unlicenced distribution version' $1
 
-rm -rf dist
+rm -rf ./dist
 mkdir dist
+sleep 1
 cat >./dist/version.json <<EOF
     {
-      "version": "$1"
+      "version": "$1",
+      "games": [
+        "Pingpong", 
+        "SlotMachine"
+      ]
     }
 EOF
 
@@ -21,8 +26,8 @@ mkdir ./dist/games
 cp -r ./games/HelloWorld/dist ./dist
 mv ./dist/dist ./dist/games/HelloWorld
 
-cp -r ./games/CadanoX/dist ./dist
-mv ./dist/dist ./dist/games/CadanoX
+# cp -r ./games/CadanoX/dist ./dist
+# mv ./dist/dist ./dist/games/CadanoX
 
 cp -r ./react-app/build ./dist
 mv ./dist/build ./dist/react-app
