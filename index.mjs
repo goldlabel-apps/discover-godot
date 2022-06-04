@@ -1,5 +1,5 @@
 
-console.warn("Entrypoint entered 1.0.7")
+console.warn("Entrypoint entered 1.0.8")
 
 /*
 

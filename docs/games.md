@@ -28,4 +28,4 @@ The game rules are the following:
 
 You can check your balance in the dinamic graph below (last 15 banks).
 
-_vs 1.0.7_
+_vs 1.0.8_
