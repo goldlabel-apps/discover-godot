@@ -1,0 +1,9 @@
+#!/bin/bash
+# chmod ug+x start
+clear
+echo "Starting Godot Node Enviroment"
+
+ttab -t 'react-app' -d ./react-app npm run start
+ttab -t 'proxy-api' -d ./proxy-api npm run serve
+
+echo "Godot Node Enviroment ready."
