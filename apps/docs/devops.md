@@ -12,4 +12,4 @@ The distribution runs on node. Or anywhere. It's a web app; really just a chunk 
 ## Firebase
 functions are used to create a mock API endpoint responding with JSON. It's also used to host the `./dist` directory
 
-_vs 1.0.8_
+_vs 1.0.9_

@@ -47,4 +47,4 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-_vs 1.0.8_
+_vs 1.0.9_
