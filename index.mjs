@@ -1,3 +1,6 @@
+
+console.warn("Entrypoint entered 1.0.3")
+
 /*
 
 import fs from 'fs'
