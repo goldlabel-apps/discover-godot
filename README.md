@@ -4,11 +4,8 @@
 
 > Godot and React JS are great at doing their own things. Together, can they deliver the Killer Casino App?  
 
-[discover-godot.web.app](https://discover-godot.web.app)
-
-## Install & Use
-
-You'll need node but just to manage the development environment, really
+[react-app](https://discover-godot.web.app)
+[Proxy API](https://discover-godot.web.app/api/)
 
 ## Objectives
 
@@ -17,6 +14,22 @@ You'll need node but just to manage the development environment, really
 Godot export presets are found here `./games/HelloWorld/export_presets.cfg`
 
 2. To be informed of poor performance in good time, we should have a configurable debugger in the game which can show us dev info like FPS. That way, when developing the game, it will be obvious if you do something which makes the framerate drop to, say, 5fps. If that happens, there are serious problems in the code.
+
+
+## Install & Use
+
+You'll need node but just to manage the development environment, really
+
+```bash
+cd <working-dir>
+git clone https://github.com/listingslab-software/discover-godot
+cd ./discover-godot && npm install
+cd ./apps/react-app && npm install
+cd ../apps/node-app && npm 
+cd ../ && npm run
+```
+
+### npm scripts
 
 ## Project Structure
 

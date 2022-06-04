@@ -9,6 +9,7 @@
     "lint": "cd ./apps/node-app && npx eslint --ext .js,.ts . --fix",
     "build": "cd ./apps/react-app && npm run build",
     "dist": "$PWD/.scripts/dist 1.0.8",
+    "proxy": "cd ./apps/node-app && npm run serve",
     "deploy": "npm run build && npm run dist && firebase deploy"
   },
   "repository": {
