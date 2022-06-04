@@ -1,10 +1,10 @@
 #!/bin/bash
 # chmod ug+x start
 clear
-echo "Starting React & Node Enviroment"
+echo "Starting react-app dev"
 
-ttab -t 'serve' -d npx serve dist
-ttab -t 'watch' -d ./node-app tsc-watch
-ttab -t 'node-app' -d ./node-app npm run serve
+ttab -t 'react-app' -d ./apps/react-app npm run start
 
-echo "Godot ready."
+# ttab -t 'serve' -d npx serve dist
+# ttab -t 'watch' -d ./apps/node-app tsc-watch
+# ttab -t 'node-app' -d ./apps/node-app npm run serve

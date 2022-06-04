@@ -3,13 +3,13 @@
   "version": "1.0.8",
   "description": "Godot is a Free and open source 2D and 3D game engine. React is quite good too",
   "scripts": {
-    "test": "cd ./react-app && npm run test",
+    "test": "cd ./apps/react-app && npm run test",
     "start": "$PWD/.scripts/start",
     "serve": "serve dist",
-    "lint": "cd ./node-app && npx eslint --ext .js,.ts . --fix",
-    "build:react": "cd ./react-app && npm run build",
+    "lint": "cd ./apps/node-app && npx eslint --ext .js,.ts . --fix",
+    "build": "cd ./apps/react-app && npm run build",
     "dist": "$PWD/.scripts/dist 1.0.8",
-    "deploy": "npm run dist && firebase deploy"
+    "deploy": "npm run build && npm run dist && firebase deploy"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "godot",
     "react",
     "pwa",
+    "slotmachine",
     "casino"
   ],
   "dependencies": {

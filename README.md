@@ -29,8 +29,8 @@ Games are developed in Godot; a Free and open source 2D and 3D game engine. Reac
 - [Pingpong](./games/Pingpong)
 - [SlotMachine](./games/SlotMachine)
 
-2. [React](./react-app)
-3. [Node](./node-app)
+2. [React](./apps/react-app)
+3. [Node](./apps/node-app)
 
 #### Docs
 
