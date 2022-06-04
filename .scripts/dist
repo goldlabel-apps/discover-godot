@@ -13,11 +13,16 @@ cat >./dist/version.json <<EOF
     }
 EOF
 
+cp ./favicon.ico ./dist
 cp ./index.html ./dist
 
-cp -r ./games/HelloWorld/dist ./dist
 mkdir ./dist/games
+
+cp -r ./games/HelloWorld/dist ./dist
 mv ./dist/dist ./dist/games/HelloWorld
+
+cp -r ./games/CadanoX/dist ./dist
+mv ./dist/dist ./dist/games/CadanoX
 
 cp -r ./react-app/build ./dist
 mv ./dist/build ./dist/react-app
