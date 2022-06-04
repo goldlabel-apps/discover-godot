@@ -6,7 +6,7 @@
     "test": "cd ./react-app && npm run test",
     "start": "$PWD/.scripts/start",
     "serve": "serve dist",
-    "lint:node": "cd ./node-app && npx eslint --ext .js,.ts . --fix",
+    "lint": "cd ./node-app && npx eslint --ext .js,.ts . --fix",
     "build:react": "cd ./react-app && npm run build",
     "dist": "$PWD/.scripts/dist 1.0.7",
     "deploy": "npm run dist && firebase deploy"
