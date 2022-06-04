@@ -45,4 +45,4 @@ The repo is split into 3 JavaScript apps. Basically frontend/backend & Games
 - [Graphics](./docs/graphics.md)
 - [Create React App](./docs/create-react-app.md)
 
-_vs 1.0.6_
+_vs 1.0.7_

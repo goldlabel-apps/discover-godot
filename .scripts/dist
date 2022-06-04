@@ -27,4 +27,4 @@ mv ./dist/dist ./dist/games/CadanoX
 cp -r ./react-app/build ./dist
 mv ./dist/build ./dist/react-app
 
-echo "Done. ./dist @$1"
+echo "Done creating version $1"
