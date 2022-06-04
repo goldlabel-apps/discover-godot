@@ -34,8 +34,8 @@ cp -r ./apps/react-app/build/jpg ./dist
 
 mkdir ./dist/games
 
-# cp -r ./games/Pingpong/dist ./dist
-# mv ./dist/dist ./dist/games/Pingpong
+cp -r ./games/Pingpong/dist ./dist
+mv ./dist/dist ./dist/games/Pingpong
 
 cp -r ./games/SlotMachine/dist ./dist
 mv ./dist/dist ./dist/games/SlotMachine

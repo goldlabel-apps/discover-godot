@@ -52,4 +52,4 @@ Games are developed in Godot; a Free and open source 2D and 3D game engine. Reac
 - [Graphics](./apps/docs/graphics.md)
 - [Create React App](./apps/docs/create-react-app.md)
 
-_vs 1.0.8_
+_vs 1.0.9_
