@@ -13,6 +13,8 @@ cat >./dist/version.json <<EOF
     }
 EOF
 
+cp ./index.html ./dist
+
 cp -r ./games/HelloWorld/dist ./dist
 mkdir ./dist/games
 mv ./dist/dist ./dist/games/HelloWorld
@@ -20,4 +22,4 @@ mv ./dist/dist ./dist/games/HelloWorld
 cp -r ./react-app/build ./dist
 mv ./dist/build ./dist/react-app
 
-echo "Done. $1 @ ./dist"
+echo "Done. ./dist @$1"
