@@ -4,4 +4,22 @@ clear
 # Creates the dist folder for deployment
 
 echo 'Creating unlicenced distribution version' $1
-echo "Done. $1 @ ./dist"
+
+rm -rf dist
+mkdir dist
+cat >./dist/version.json <<EOF
+    {
+      "version": "$1"
+    }
+EOF
+
+cp ./index.html ./dist
+
+cp -r ./games/HelloWorld/dist ./dist
+mkdir ./dist/games
+mv ./dist/dist ./dist/games/HelloWorld
+
+cp -r ./react-app/build ./dist
+mv ./dist/build ./dist/react-app
+
+echo "Done. ./dist @$1"

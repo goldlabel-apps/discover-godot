@@ -17,4 +17,4 @@ The repo is split into 2 JavaScript apps. Basically frontend/backend.
 - [Graphics](./docs/graphics.md)
 - [Create React App](./docs/create-react-app.md)
 
-_vs 1.0.5_
+_vs 1.0.6_
