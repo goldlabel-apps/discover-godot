@@ -74,12 +74,12 @@ var total_runs : int
 func _ready():
   # Initializes grid of tiles
   for col in reels:
-    grid_pos.append([])
-    tiles_moved_per_reel.append(0)
-    for row in range(rows):
-      # Position extra tiles above and below the viewport
-      grid_pos[col].append(Vector2(col, row-0.5*extra_tiles) * tile_size)
-      _add_tile(col, row)
+	grid_pos.append([])
+	tiles_moved_per_reel.append(0)
+	for row in range(rows):
+	  # Position extra tiles above and below the viewport
+	  grid_pos[col].append(Vector2(col, row-0.5*extra_tiles) * tile_size)
+	  _add_tile(col, row)
   
 # Stores and initializes a new tile at the given grid cell
 func _add_tile(col :int, row :int) -> void:
@@ -99,17 +99,17 @@ func get_tile(col :int, row :int) -> SlotTile:
 func start() -> void:
   # Only start if it is not running yet
   if state == State.OFF:
-    state = State.ON
-    total_runs = expected_runs
-    # Ask server for result
-    _get_result()
-    print(result)
-    # Spins all reels
-    for reel in reels:
-      _spin_reel(reel)
-      # Spins the next reel a little bit later
-      if reel_delay > 0:
-        yield(get_tree().create_timer(reel_delay), "timeout")
+	state = State.ON
+	total_runs = expected_runs
+	# Ask server for result
+	_get_result()
+	print(result)
+	# Spins all reels
+	for reel in reels:
+	  _spin_reel(reel)
+	  # Spins the next reel a little bit later
+	  if reel_delay > 0:
+		yield(get_tree().create_timer(reel_delay), "timeout")
   
 # Force the machine to stop before runtime ends
 func stop():
@@ -123,7 +123,7 @@ func stop():
 # Is called when the animation stops
 func _stop() -> void:
   for reel in reels:
-    tiles_moved_per_reel[reel] = 0
+	tiles_moved_per_reel[reel] = 0
   state = State.OFF
   emit_signal("stopped")
 
@@ -131,7 +131,7 @@ func _stop() -> void:
 func _spin_reel(reel :int) -> void:
   # Moves each tile of the reel
   for row in rows:
-    _move_tile(get_tile(reel, row))
+	_move_tile(get_tile(reel, row))
 
 func _move_tile(tile :SlotTile) -> void:
   # Plays a spin up animation
@@ -150,12 +150,12 @@ func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
 
   # If tile moved out of the viewport, move it to the invisible row at the top
   if (tile.position.y > grid_pos[0][-1].y):
-    tile.position.y = grid_pos[0][0].y
+	tile.position.y = grid_pos[0][0].y
   # Set a new random texture
   var current_idx = total_runs - reel_runs
   if (current_idx < tiles_per_reel):
-    var result_texture = pictures[result.tiles[reel][current_idx]]
-    tile.set_texture(result_texture)
+	var result_texture = pictures[result.tiles[reel][current_idx]]
+	tile.set_texture(result_texture)
   else:
    tile.set_texture(_randomTexture())
 
@@ -163,13 +163,13 @@ func _on_tile_moved(tile: SlotTile, _nodePath) -> void:
   # Stop moving after the reel ran expected_runs times
   # Or if the player stopped it
   if (state != State.OFF && reel_runs != total_runs):
-    tile.move_by(Vector2(0, tile_size.y))
+	tile.move_by(Vector2(0, tile_size.y))
   else: # stop moving this reel
-    tile.spin_down()
-    # When last reel stopped, machine is stopped
-    print(str(reel) + " - " + str(reels))
-    if reel == reels - 1:
-      _stop()
+	tile.spin_down()
+	# When last reel stopped, machine is stopped
+	print(str(reel) + " - " + str(reels))
+	if reel == reels - 1:
+	  _stop()
 
 # Divide it by the number of tiles to know how often the whole reel moved
 # Since this function is called by each tile, the number changes (e.g. for 6 tiles: 1/6, 2/6, ...)
@@ -182,11 +182,11 @@ func _randomTexture() -> String:
 
 func _get_result() -> void:
   result = {
-    "tiles": [
-      [ 0,0,0,0 ],
-      [ 0,0,0,0 ],
-      [ 0,0,0,0 ],
-      [ 0,0,0,0 ],
-      [ 0,0,0,0 ]
-    ]
+	"tiles": [
+	  [ 0,0,0,0 ],
+	  [ 0,0,0,0 ],
+	  [ 0,0,0,0 ],
+	  [ 0,0,0,0 ],
+	  [ 0,0,0,0 ]
+	]
   }
