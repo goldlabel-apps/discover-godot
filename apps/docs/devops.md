@@ -1,4 +1,4 @@
-> [Home](../README.md) 
+> [Home](../../README.md) 
 
 # Pipeline
 This is all about structuring the project to make it easy to implement tests or Continuous Integration with Bitbucket pipelines, circle CI or Github Actions. Prefereable GitHub actions because I already pay github.

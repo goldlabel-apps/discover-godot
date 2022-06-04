@@ -19,6 +19,7 @@ module.exports = {
   },
   ignorePatterns: [
     "/lib/**/*", // Ignore built files.
+    "/src/serverSideRender",
   ],
   plugins: [
     "@typescript-eslint",

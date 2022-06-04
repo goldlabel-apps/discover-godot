@@ -1,6 +1,12 @@
 {
   "hosting": {
     "public": "dist",
+    "rewrites": [
+      {
+        "source": "/api",
+        "function": "proxyAPI"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
