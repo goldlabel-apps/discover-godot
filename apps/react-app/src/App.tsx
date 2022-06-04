@@ -1,21 +1,65 @@
 import React from 'react'
+import { 
+  Box,
+  Button,
+  Typography,
+  CssBaseline,
+} from '@mui/material'
 import {
   useAppSelector,
+  useAppDispatch,
 } from "./app/hooks"
-import { selectGames } from "./features/games/gamesSlice"
+import { selectGames, setGames } from "./features/games/gamesSlice"
 
 function App() {
   const games = useAppSelector(selectGames)
-  //console.log("games", games)
+  const dispatch = useAppDispatch()
 
-  return (
-    <div className="react-app">
-       Games Slice
-      <pre>
-        { JSON.stringify( games, null, 2 ) }
-      </pre>
-    </div>
-  )
+  React.useEffect(() => {
+    const { started } = games.data
+    // console.log ("started", started)
+    if (! started ){
+      dispatch( setGames({key: "started", value: true}))
+    }
+  }, [games, dispatch])
+
+  const appStyle = {
+    margin: "auto",
+    display: "flex",
+    borderRadius: 2,
+    textAlign: "center",
+    border: "1px solid rgba(0,0,0,0.09)",
+    background: "rgba(0,0,0,0.01)",
+    width: 350,
+    height: "100vh",
+  }
+
+  const debuggerOn = false
+
+  return <React.Fragment>
+          <CssBaseline />
+          <Box sx={ appStyle }>
+            <Box sx={{ m: 3, flexGrow:1}}>
+              <Typography variant="h2" gutterBottom>
+                Games
+              </Typography>
+
+              <Button
+                fullWidth
+                variant="contained"
+              >
+              Pingpong
+              </Button>
+            </Box>
+            
+            
+          </Box>
+
+          { debuggerOn ? <pre>
+          { JSON.stringify( games.data, null, 2 ) }
+          </pre> : null }
+          
+        </React.Fragment>
 }
 
 export default App

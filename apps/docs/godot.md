@@ -16,4 +16,4 @@ func _process(delta: float) -> void:
     set_text("FPS " + String(Engine.get_frames_per_second()))
 ```
 
-_vs 1.0.8_
+_vs 1.0.9_

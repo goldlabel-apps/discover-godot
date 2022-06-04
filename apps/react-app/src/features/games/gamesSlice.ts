@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
 
 export interface GamesState {
@@ -6,8 +6,8 @@ export interface GamesState {
 }
 
 const initialState: GamesState = {
-  data:{
-    nothing: 123,
+  data: {
+    proxyApiUrl: "https://discover-godot.web.app/api/",
   }
 }
 
@@ -15,8 +15,12 @@ export const gamesSlice = createSlice({
   name: 'games',
   initialState,
   reducers: {
-    setGames: (state) => {
-      state.data += 1
+    setGames: (state, action: PayloadAction<any>) => {
+      const { key, value } = action.payload
+      state.data = {
+          ...state.data,
+          [key]: value,
+      }
     },
   },
 })
