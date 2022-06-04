@@ -1,0 +1,1 @@
+Slot machines are a well known game trope, here are a few parameters
