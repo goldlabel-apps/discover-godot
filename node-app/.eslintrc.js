@@ -25,6 +25,8 @@ module.exports = {
     "import",
   ],
   rules: {
+    "@typescript-eslint/ban-ts-comment": 0,
+    "require-jsdoc": 0,
     "quotes": ["error", "double"],
     "import/no-unresolved": 0,
   },
