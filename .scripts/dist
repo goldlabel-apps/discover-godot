@@ -3,4 +3,5 @@
 clear
 # Creates the dist folder for deployment
 
-echo 'Creating unlicenced dist vs' $1
+echo 'Creating unlicenced distribution version' $1
+echo "Done. $1 @ ./dist"

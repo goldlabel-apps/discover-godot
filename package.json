@@ -8,7 +8,7 @@
     "lint:node": "cd ./node-app && npx eslint --ext .js,.ts . --fix",
     "build:react": "cd ./react-app && npm run build",
     "dist": "npm run build:react && $PWD/.scripts/dist 1.0.4",
-    "deploy": "npm run dist && firebase deploy"
+    "deploy": "npm run dist && firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",
