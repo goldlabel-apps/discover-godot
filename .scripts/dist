@@ -42,6 +42,9 @@ mv ./dist/dist ./dist/games/Physics
 cp -r ./games/Textify/dist ./dist
 mv ./dist/dist ./dist/games/Textify
 
+cp -r ./games/FluffyHead/dist ./dist
+mv ./dist/dist ./dist/games/FluffyHead
+
 echo ""
 echo "Done! (created version $1)"
 
