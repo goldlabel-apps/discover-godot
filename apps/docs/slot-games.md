@@ -22,4 +22,4 @@ Slot machines are a well known game trope, here are a set of rules used by some 
 
 You can check your balance in the dinamic graph below (last 15 banks).
 
-_vs 1.1.1_
+_vs 1.1.2_
