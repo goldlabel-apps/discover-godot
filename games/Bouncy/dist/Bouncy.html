@@ -113,6 +113,8 @@
 	</style>
 <link id='-gd-engine-icon' rel='icon' type='image/png' href='Bouncy.icon.png' />
 <link rel='apple-touch-icon' href='Bouncy.apple-touch-icon.png'/>
+<link rel='manifest' href='Bouncy.manifest.json'>
+<script type='application/javascript'>window.addEventListener('load', () => {if ('serviceWorker' in navigator) {navigator.serviceWorker.register('Bouncy.service.worker.js');}});</script>
 
 </head>
 <body>
@@ -138,7 +140,7 @@
 	<script type='text/javascript' src='Bouncy.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"Bouncy","experimentalVK":false,"fileSizes":{"Bouncy.pck":54432,"Bouncy.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"Bouncy","experimentalVK":false,"fileSizes":{"Bouncy.pck":178240,"Bouncy.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {

@@ -33,11 +33,14 @@ mv ./dist/dist ./dist/games/Bouncy
 cp -r ./games/SlotMachine/dist ./dist
 mv ./dist/dist ./dist/games/SlotMachine
 
-cp -r ./games/CrashCourse/dist ./dist
-mv ./dist/dist ./dist/games/CrashCourse
-
 cp -r ./games/JsonLoader/dist ./dist
 mv ./dist/dist ./dist/games/JsonLoader
+
+cp -r ./games/Physics/dist ./dist
+mv ./dist/dist ./dist/games/Physics
+
+cp -r ./games/Textify/dist ./dist
+mv ./dist/dist ./dist/games/Textify
 
 echo ""
 echo "Done! (created version $1)"
