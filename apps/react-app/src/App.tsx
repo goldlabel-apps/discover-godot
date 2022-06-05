@@ -1,8 +1,12 @@
 import React from 'react'
 import { 
   CssBaseline,
+  Avatar,
   Box,
-  Typography,
+  Card,
+  CardContent,
+  CardHeader,
+  CardActions,
   MenuList,
   ListItem,
   ListItemIcon,
@@ -45,49 +49,47 @@ function App() {
   return <React.Fragment>
           <CssBaseline />
           <Box sx={ appStyle }>
-            <Box sx={{ m: 3}}>
-              <Typography variant="h4" sx={{ fontWeight: "lighter" }} gutterBottom>
-                Godot Games
-              </Typography>
-              
-              <MenuList sx={{ mb: 2 }} color="primary" dense>
-                <ListItem button onClick={() => { onGameClick("Pingpong") }} >
-                  <ListItemIcon>
-                    <Icon icon="newtab" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="Pingpong"
-                    secondary="working"
-                  />
-                </ListItem>
-                <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
-                  <ListItemIcon>
-                    <Icon icon="newtab" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="Slot Machine"
-                    secondary="broken"
-                  />
-                </ListItem>
-              </MenuList>
-              
-              
-
+            <Box sx={{ m: 2}}>
+              <Card>
+              <CardHeader
+                avatar={<Avatar src="./logo32.png" />}
+                title="Godot Crash Course"
+                subheader="Select Game"
+                
+              />
+              <CardContent>
+                <MenuList>
+                  <ListItem  button onClick={() => { onGameClick("Pingpong") }} >
+                    <ListItemIcon>
+                      <Icon icon="newtab" />
+                    </ListItemIcon>
+                    <ListItemText 
+                      primary="Pingpong"
+                      secondary="working"
+                    />
+                  </ListItem>
+                  <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
+                    <ListItemIcon>
+                      <Icon icon="newtab" />
+                    </ListItemIcon>
+                    <ListItemText 
+                      primary="Slot Machine"
+                      secondary="broken"
+                    />
+                  </ListItem>
+                </MenuList>
+                </CardContent>
+                <CardActions sx={{ pl: 1 }}>
+                  <IconButton
+                    onClick={() => { 
+                      window.open("https://github.com/listingslab-software/discover-godot","_blank")
+                    }}>
+                    <Icon icon="github" />
+                  </IconButton>
+                </CardActions>
+              </Card>
             </Box>
-
-          
           </Box>
-
-            <Box sx={{
-              position: "absolute",
-              height: 50,
-              width: 50,
-              bottom: 0, right: 0
-            }}>
-              <IconButton>
-                <Icon icon="github" />
-              </IconButton>
-            </Box>
 
           { debuggerOn ? <pre>
           { JSON.stringify( games.data, null, 2 ) }
@@ -98,3 +100,8 @@ function App() {
 
 export default App
 
+/*
+avatar={<IconButton onClick={() => { console.log ("home") }}>
+                          <Avatar src="./logo32.png" />
+                        </IconButton>}
+*/
