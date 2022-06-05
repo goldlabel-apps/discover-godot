@@ -43,6 +43,7 @@ margin_right = 578.0
 margin_bottom = 52.0
 text = "Room A"
 align = 1
+
 [connection signal="pressed" from="SceneChanger/ButtonRoomA" to="." method="_on_ButtonRoomA_pressed"]
 [connection signal="pressed" from="SceneChanger/ButtonRoomB" to="." method="_on_ButtonRoomB_pressed"]
 [connection signal="pressed" from="SceneChanger/ButtonManualSave" to="." method="_on_ButtonManualSave_pressed"]

@@ -18,4 +18,5 @@ margin_right = 472.0
 margin_bottom = 56.0
 rect_min_size = Vector2( 0, 48 )
 text = "Create Floating Text"
+
 [connection signal="pressed" from="MarginContainer/CreateFloatingTextButton" to="." method="_on_CreateFloatingTextButton_pressed"]

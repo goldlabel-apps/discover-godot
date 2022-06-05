@@ -16,7 +16,7 @@ export const proxyAPI = functions.https.onRequest( async (req, response) => {
         id: "0001wxyz",
         data: {
           gamesId: "QsQjMSknNSMIfLL678dE",
-          gameSlug: "Pingpong",
+          gameSlug: "Bouncy",
           title: "Pingpont Slots",
           playerName: "Skater Bob",
         },

@@ -19,4 +19,5 @@ mouse_filter = 2
 margin_right = 48.0
 margin_bottom = 20.0
 text = "Reset"
+
 [connection signal="pressed" from="UI/ResetButton" to="." method="_on_ResetButton_pressed"]

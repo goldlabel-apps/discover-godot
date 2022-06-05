@@ -11,12 +11,10 @@ sleep 1
 cat >./dist/version.json <<EOF
     {
       "version": "$1",
-      "games": [
-        "SlotMachine"
-      ]
     }
 EOF
 
+cp -r ./apps/react-app/build/static ./dist
 cp ./apps/react-app/build/index.html ./dist
 cp ./apps/react-app/build/.htaccess ./dist
 cp ./apps/react-app/build/favicon.ico ./dist
@@ -27,13 +25,10 @@ cp ./apps/react-app/build/logo192.png ./dist
 cp ./apps/react-app/build/robots.txt ./dist
 cp ./apps/react-app/build/service-worker.js ./dist
 
-cp -r ./apps/react-app/build/static ./dist
-cp -r ./apps/react-app/build/jpg ./dist
-
 mkdir ./dist/games
 
-cp -r ./games/Pingpong/dist ./dist
-mv ./dist/dist ./dist/games/Pingpong
+cp -r ./games/Bouncy/dist ./dist
+mv ./dist/dist ./dist/games/Bouncy
 
 cp -r ./games/SlotMachine/dist ./dist
 mv ./dist/dist ./dist/games/SlotMachine

@@ -5,7 +5,7 @@
 ### Godot Crash Course
 
 [React Web App](https://discover-godot.web.app)
-[Pingpong](https://discover-godot.web.app/games/Pingpong)
+[Bouncy](https://discover-godot.web.app/games/Bouncy)
 [SlotMachine](https://discover-godot.web.app/games/SlotMachine)
 [Proxy API](https://discover-godot.web.app/api/)
 
@@ -57,7 +57,7 @@ The project is split into 3 JavaScript apps; Slot Games (Godot), Frontend (React
 
 Games are developed in Godot; a Free and open source 2D and 3D game engine. React is quite good too. Together can they deliver a Killer Casino App? 
 
-- [Pingpong](./games/Pingpong)
+- [Bouncy](./games/Bouncy)
 - [SlotMachine](./games/SlotMachine)
 
 2. [React](./apps/react-app) 

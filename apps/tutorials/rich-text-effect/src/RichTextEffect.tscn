@@ -32,7 +32,7 @@ margin_bottom = 80.0
 rect_clip_content = false
 bbcode_enabled = true
 bbcode_text = "This is a[hover speed=5] custom hover effect."
-text = "This is a custom hover effect."
+text = "This is a[hover speed=5] custom hover effect."
 custom_effects = [ SubResource( 1 ) ]
 
 [node name="Wave" type="PanelContainer" parent="GridContainer"]

@@ -55,6 +55,7 @@ margin_bottom = 526.0
 size_flags_horizontal = 3
 text = "This is where the data will be printed."
 wrap_enabled = true
+
 [connection signal="pressed" from="CenterContainer/HSplitContainer/VBoxContainer/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="CenterContainer/HSplitContainer/VBoxContainer/LoadButton" to="." method="_on_LoadButton_pressed"]
 [connection signal="pressed" from="CenterContainer/HSplitContainer/VBoxContainer/DeleteButton" to="." method="_on_DeleteButton_pressed"]
