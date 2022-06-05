@@ -1,5 +1,3 @@
-# Discover Godot
-
 ## Overview
 
 > Godot and React JS are great at doing their own things. Together, can they deliver the Killer Casino App?  
@@ -9,18 +7,15 @@
 
 ## Objectives
 
-1. Clone repo https://github.com/CadanoX/Godot-Slot-Machine
+1. Clone repo https://github.com/CadanoX/Godot-Slot-Machine && Get it to compile
 
-2. Get it to compile
+2. Export the project to run on a browser, host it on a local web server (nginx/apache/your favourite web server) and load the game in a browser
 
-3. Export the project to run on a browser, host it on a local web server (nginx/apache/your favourite web server) and load the game in a browser.
+3. Add an FPS counter that is visible on a mobile resolution. You can use Chrome's developer tool to bring up a browser window with an iPhone resolution. Create a screen capture of the game running under mobile resolution with the FPS counter visible
 
-4. Add an FPS counter that is visible on a mobile resolution. You can use Chrome's developer tool to bring up a browser window with an iPhone resolution. Send a screen capture of the game running under mobile resolution with the FPS counter visible.
+4. Add a loading screen to the game: the loading screen just needs to be a button that when clicked loads the main game. Zip the project
 
-5. Add a loading screen to the game: the loading screen just needs to be a button that when clicked loads the main game. Send me the zipped up project.
-
-6. Clicking the "ROLL" button makes an HTTP request (it doesn't matter to what URL - it's just for testing) - sending me a screenshot of the packet containing the HTTP request.
-
+5. Clicking the "ROLL" button makes an HTTP request (it doesn't matter to what URL - it's just for testing) - take a screenshot of the packet containing the HTTP request
 
 ## Conclusions
 
