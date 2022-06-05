@@ -24,8 +24,6 @@ cp ./apps/react-app/build/asset-manifest.json ./dist
 cp ./apps/react-app/build/manifest.json ./dist
 cp ./apps/react-app/build/logo32.png ./dist
 cp ./apps/react-app/build/logo192.png ./dist
-cp ./apps/react-app/build/logo512.png ./dist
-cp ./apps/react-app/build/opengraph.png ./dist
 cp ./apps/react-app/build/robots.txt ./dist
 cp ./apps/react-app/build/service-worker.js ./dist
 

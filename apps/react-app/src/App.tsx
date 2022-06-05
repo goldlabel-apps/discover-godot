@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  IconButton,
 } from '@mui/material'
 import {
   useAppSelector,
@@ -16,7 +17,7 @@ import { selectGames, setGames } from "./features/games/gamesSlice"
 import { Icon } from "./theme"
 
 function App() {
-  const debuggerOn = true
+  const debuggerOn = false
   const games = useAppSelector(selectGames)
   const dispatch = useAppDispatch()
 
@@ -31,9 +32,10 @@ function App() {
   const appStyle = {
     margin: "auto",
     width: 350,
-    height: "100vh",
-    display: "flex",
-    textAlign: "center",
+    // height: "100vh",
+    // display: "flex",
+    position: "relative",
+    // textAlign: "center",
   }
 
   const onGameClick = (game: string) => {
@@ -43,34 +45,49 @@ function App() {
   return <React.Fragment>
           <CssBaseline />
           <Box sx={ appStyle }>
-            <Box sx={{ m: 3, flexGrow:1}}>
+            <Box sx={{ m: 3}}>
               <Typography variant="h4" sx={{ fontWeight: "lighter" }} gutterBottom>
-                Play Game
+                Godot Games
               </Typography>
               
-              <MenuList>
+              <MenuList sx={{ mb: 2 }} color="primary" dense>
                 <ListItem button onClick={() => { onGameClick("Pingpong") }} >
+                  <ListItemIcon>
+                    <Icon icon="newtab" />
+                  </ListItemIcon>
                   <ListItemText 
                     primary="Pingpong"
                     secondary="working"
                   />
+                </ListItem>
+                <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
                   <ListItemIcon>
                     <Icon icon="newtab" />
                   </ListItemIcon>
-                </ListItem>
-
-                <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
                   <ListItemText 
                     primary="Slot Machine"
                     secondary="broken"
                   />
-                  <ListItemIcon>
-                    <Icon icon="newtab" />
-                  </ListItemIcon>
                 </ListItem>
               </MenuList>
+              
+              
+
             </Box>
+
+          
           </Box>
+
+            <Box sx={{
+              position: "absolute",
+              height: 50,
+              width: 50,
+              bottom: 0, right: 0
+            }}>
+              <IconButton>
+                <Icon icon="github" />
+              </IconButton>
+            </Box>
 
           { debuggerOn ? <pre>
           { JSON.stringify( games.data, null, 2 ) }

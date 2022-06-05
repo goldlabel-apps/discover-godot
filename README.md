@@ -1,8 +1,12 @@
 ## Overview
 
-> Godot and React JS are great at doing their own things. Together, can they deliver the Killer Casino App?  
+> Godot and React JS are great at doing their own things. Together, can they deliver the Killer Casino App? 
 
-[react-app](https://discover-godot.web.app)
+### Godot Crash Course
+
+[React Web App](https://discover-godot.web.app)
+[Pingpong](https://discover-godot.web.app/games/Pingpong)
+[SlotMachine](https://discover-godot.web.app/games/SlotMachine)
 [Proxy API](https://discover-godot.web.app/api/)
 
 ## Objectives
