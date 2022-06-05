@@ -4,12 +4,13 @@ import {
   Avatar,
   Box,
   Card,
-  CardContent,
   CardHeader,
-  CardActions,
+  createTheme, 
+  ThemeProvider,
   MenuList,
   ListItem,
   ListItemIcon,
+  ListItemAvatar,
   ListItemText,
   IconButton,
 } from '@mui/material'
@@ -18,7 +19,8 @@ import {
   useAppDispatch,
 } from "./app/hooks"
 import { selectGames, setGames } from "./features/games/gamesSlice"
-import { Icon } from "./theme"
+import { Icon, getDesignTokens } from "./theme"
+import FooterActions from "./components/FooterActions"
 
 function App() {
   const debuggerOn = false
@@ -36,57 +38,68 @@ function App() {
   const appStyle = {
     margin: "auto",
     width: 350,
-    // height: "100vh",
-    // display: "flex",
     position: "relative",
-    // textAlign: "center",
   }
 
   const onGameClick = (game: string) => {
     window.open( `/games/${game}/${game}.html` ,"_blank")
   }
 
-  return <React.Fragment>
+  const onCodeClick = (url: string) => {
+    window.open( url ,"_blank")
+  }
+
+  const themeMode = createTheme(getDesignTokens("light"))
+
+  return <ThemeProvider theme={themeMode}>
           <CssBaseline />
           <Box sx={ appStyle }>
             <Box sx={{ m: 2}}>
               <Card>
               <CardHeader
                 avatar={<Avatar src="./logo32.png" />}
-                title="Godot Crash Course"
-                subheader="Select Game"
+                title="Select Game"
                 
               />
-              <CardContent>
                 <MenuList>
-                  <ListItem  button onClick={() => { onGameClick("CrashCourse") }} >
-                    <ListItemIcon>
-                      <Icon icon="newtab" />
-                    </ListItemIcon>
+                  
+                  <ListItem  > 
+                    <ListItemAvatar>
+                      <Avatar src="https://discover-godot.web.app/games/Bouncy/Bouncy.icon.png" />
+                    </ListItemAvatar>
                     <ListItemText 
-                      primary="CrashCourse"
-                      secondary="working"
+                      primary="Bouncy Ball"
                     />
-                  </ListItem>
-                  <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
                     <ListItemIcon>
-                      <Icon icon="newtab" />
+                      <IconButton onClick={() => { onGameClick("Bouncy") }}>
+                        <Icon icon="newtab" />
+                      </IconButton>
+                      <IconButton onClick={() => { onCodeClick("") }}>
+                        <Icon icon="code" />
+                      </IconButton>
                     </ListItemIcon>
+                  </ListItem>  
+
+                  <ListItem> 
+                    <ListItemAvatar>
+                      <Avatar src="https://discover-godot.web.app/games/JsonLoader/JsonLoader.icon.png"/>
+                    </ListItemAvatar>
                     <ListItemText 
-                      primary="Slot Machine"
-                      secondary="broken"
+                      primary="JSON Loader"
                     />
-                  </ListItem>
+                    <ListItemIcon>
+                      <IconButton onClick={() => { onGameClick("JsonLoader") }}>
+                        <Icon icon="newtab" />
+                      </IconButton>
+                      <IconButton onClick={() => { onCodeClick("") }}>
+                        <Icon icon="code" />
+                      </IconButton>
+                    </ListItemIcon>
+                  </ListItem> 
+
                 </MenuList>
-                </CardContent>
-                <CardActions sx={{ pl: 1 }}>
-                  <IconButton
-                    onClick={() => { 
-                      window.open("https://github.com/listingslab-software/discover-godot","_blank")
-                    }}>
-                    <Icon icon="github" />
-                  </IconButton>
-                </CardActions>
+
+                <FooterActions />
               </Card>
             </Box>
           </Box>
@@ -95,7 +108,7 @@ function App() {
           { JSON.stringify( games.data, null, 2 ) }
           </pre> : null }
           
-        </React.Fragment>
+        </ThemeProvider>
 }
 
 export default App
@@ -104,4 +117,26 @@ export default App
 avatar={<IconButton onClick={() => { console.log ("home") }}>
                           <Avatar src="./logo32.png" />
                         </IconButton>}
-*/
+
+
+
+<ListItem  button onClick={() => { onGameClick("CrashCourse") }} >
+                    <ListItemIcon>
+                      <Icon icon="newtab" />
+                    </ListItemIcon>
+                    <ListItemText 
+                      primary="CrashCourse"
+                    />
+                  </ListItem>
+
+                  <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
+                    <ListItemIcon>
+                      <Icon icon="newtab" />
+                    </ListItemIcon>
+                    <ListItemText 
+                      primary="Slot Machine"
+                    />
+                  </ListItem>
+
+
+                        */

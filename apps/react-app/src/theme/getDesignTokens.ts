@@ -16,6 +16,10 @@ const { primary, secondary } = theme
 export const getDesignTokens = (mode: PaletteMode) => ({
     palette: {
         mode,
+        background: {
+            default: "rgba(0,0,0, 0.005)",
+            paper: "rgba(255,255,255, 1)",
+        },
         primary: {
             main: primary,
         },
