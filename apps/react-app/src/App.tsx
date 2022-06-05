@@ -10,7 +10,9 @@ import {
   MenuList,
   ListItem,
   ListItemIcon,
+  ListItemAvatar,
   ListItemText,
+  IconButton,
 } from '@mui/material'
 import {
   useAppSelector,
@@ -36,16 +38,16 @@ function App() {
   const appStyle = {
     margin: "auto",
     width: 350,
-    // height: "100vh",
-    // display: "flex",
     position: "relative",
-    // textAlign: "center",
   }
 
   const onGameClick = (game: string) => {
     window.open( `/games/${game}/${game}.html` ,"_blank")
   }
 
+  const onCodeClick = (url: string) => {
+    window.open( url ,"_blank")
+  }
 
   const themeMode = createTheme(getDesignTokens("light"))
 
@@ -61,15 +63,40 @@ function App() {
               />
                 <MenuList>
                   
-                  <ListItem button onClick={() => { onGameClick("Bouncy") }} > 
+                  <ListItem  > 
+                    <ListItemAvatar>
+                      <Avatar src="https://discover-godot.web.app/games/Bouncy/Bouncy.icon.png" />
+                    </ListItemAvatar>
                     <ListItemText 
-                      primary="Bouncy"
+                      primary="Bouncy Ball"
                     />
                     <ListItemIcon>
-                    <Icon icon="newtab" color="secondary" />
-                  </ListItemIcon>
+                      <IconButton onClick={() => { onGameClick("Bouncy") }}>
+                        <Icon icon="newtab" />
+                      </IconButton>
+                      <IconButton onClick={() => { onCodeClick("") }}>
+                        <Icon icon="code" />
+                      </IconButton>
+                    </ListItemIcon>
                   </ListItem>  
-                  
+
+                  <ListItem> 
+                    <ListItemAvatar>
+                      <Avatar src="https://discover-godot.web.app/games/JsonLoader/JsonLoader.icon.png"/>
+                    </ListItemAvatar>
+                    <ListItemText 
+                      primary="JSON Loader"
+                    />
+                    <ListItemIcon>
+                      <IconButton onClick={() => { onGameClick("JsonLoader") }}>
+                        <Icon icon="newtab" />
+                      </IconButton>
+                      <IconButton onClick={() => { onCodeClick("") }}>
+                        <Icon icon="code" />
+                      </IconButton>
+                    </ListItemIcon>
+                  </ListItem> 
+
                 </MenuList>
 
                 <FooterActions />
