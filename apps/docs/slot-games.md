@@ -1,6 +1,6 @@
 > [Home](../../README.md) 
 
-# Games
+# Slot Games
 
 Slot machines are a well known game trope, here are a set of rules used by some fella who made one using HTML/CSS/JavaScript
 
