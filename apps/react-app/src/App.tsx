@@ -100,6 +100,24 @@ function App() {
                     </ListItemIcon>
                   </ListItem> 
 
+                  <ListItem> 
+                    <ListItemAvatar>
+                      <Avatar src="https://discover-godot.web.app/games/SlotMachine/SlotMachine.icon.png"/>
+                    </ListItemAvatar>
+                    <ListItemText 
+                      primary="Slot Machine"
+                    />
+                    <ListItemIcon>
+                      <IconButton onClick={() => { onGameClick("SlotMachine") }}>
+                        <Icon icon="newtab" />
+                      </IconButton>
+                      <IconButton onClick={() => { onCodeClick("https://github.com/listingslab-software/discover-godot/tree/master/games/SlotMachine") }}>
+                        <Icon icon="code" />
+                      </IconButton>
+                    </ListItemIcon>
+                  </ListItem> 
+
+
                 </MenuList>
 
                 <FooterActions />
@@ -117,34 +135,9 @@ function App() {
 export default App
 
 /*
-avatar={<IconButton onClick={() => { console.log ("home") }}>
-                          <Avatar src="./logo32.png" />
-                        </IconButton>}
-
-
-
-<ListItem  button onClick={() => { onGameClick("CrashCourse") }} >
-                    <ListItemIcon>
-                      <Icon icon="newtab" />
-                    </ListItemIcon>
-                    <ListItemText 
-                      primary="CrashCourse"
-                    />
-                  </ListItem>
-
-                  <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
-                    <ListItemIcon>
-                      <Icon icon="newtab" />
-                    </ListItemIcon>
-                    <ListItemText 
-                      primary="Slot Machine"
-                    />
-                  </ListItem>
-
 
                   listItemGame = {
                     gameId: "0123",
                     
-                  }
-
-                        */
+                  } 
+   */
