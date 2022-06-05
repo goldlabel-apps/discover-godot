@@ -2,13 +2,7 @@
 
 # Games
 
-1 type - Slot Machine.
-
-Slot Machine in JS (Spanish version below)
-
-Slot machine in pure HTML/CSS/JavaScript.
-
-The game rules are the following:
+Slot machines are a well known game trope, here are a set of rules used by some fella who made one using HTML/CSS/JavaScript
 
 - You can bet as money as you have in bank. You start with 50 units. You can change the money for betting changing the number in the box (initially 10 units)
 - If you reach 100 units you win, if you down to 0 you lose.
@@ -28,4 +22,4 @@ The game rules are the following:
 
 You can check your balance in the dinamic graph below (last 15 banks).
 
-_vs 1.0.9_
+_vs 1.1.0_
