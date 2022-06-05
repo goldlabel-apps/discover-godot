@@ -51,4 +51,5 @@ render_target_update_mode = 3
 
 [node name="SlotMachine" type="Node2D" parent="ViewportContainer/Viewport"]
 script = ExtResource( 1 )
+
 [connection signal="button_down" from="Roll" to="." method="_on_Roll_button_down"]
