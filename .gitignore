@@ -1,6 +1,9 @@
+# Normally speaking one would not commit distributions folder
+# but it behoves us to to do sin this case
+# dist 
+
 _WIP
 .DS_Store
-dist 
 node_modules
 .env
 .firebase

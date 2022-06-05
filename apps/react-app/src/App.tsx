@@ -62,6 +62,8 @@ function App() {
                 
               />
                 <MenuList>
+
+                  
                   
                   <ListItem  > 
                     <ListItemAvatar>
@@ -69,12 +71,13 @@ function App() {
                     </ListItemAvatar>
                     <ListItemText 
                       primary="Bouncy Ball"
+                      secondary="Demonstrates animation and FPS"
                     />
                     <ListItemIcon>
                       <IconButton onClick={() => { onGameClick("Bouncy") }}>
                         <Icon icon="newtab" />
                       </IconButton>
-                      <IconButton onClick={() => { onCodeClick("") }}>
+                      <IconButton onClick={() => { onCodeClick("https://github.com/listingslab-software/discover-godot/tree/master/games/Bouncy") }}>
                         <Icon icon="code" />
                       </IconButton>
                     </ListItemIcon>
@@ -91,7 +94,7 @@ function App() {
                       <IconButton onClick={() => { onGameClick("JsonLoader") }}>
                         <Icon icon="newtab" />
                       </IconButton>
-                      <IconButton onClick={() => { onCodeClick("") }}>
+                      <IconButton onClick={() => { onCodeClick("https://github.com/listingslab-software/discover-godot/tree/master/games/JsonLoader") }}>
                         <Icon icon="code" />
                       </IconButton>
                     </ListItemIcon>
@@ -138,5 +141,10 @@ avatar={<IconButton onClick={() => { console.log ("home") }}>
                     />
                   </ListItem>
 
+
+                  listItemGame = {
+                    gameId: "0123",
+                    
+                  }
 
                         */
