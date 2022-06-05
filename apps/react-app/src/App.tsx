@@ -42,7 +42,7 @@ function App() {
   }
 
   const onGameClick = (game: string) => {
-    window.open( `/games/${game}/${game}.html` ,"_blank")
+    window.open( `/games/${game}/${game}.html` ,"_self")
   }
 
   const onCodeClick = (url: string) => {
@@ -60,6 +60,13 @@ function App() {
       githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/Textify",
     },
     {
+      gameSlug: "FluffyHead",
+      title: "Fluffy Headed Silly Game",
+      intro: "Use your arrow keys & just bounce about a bit",
+      icon: "https://discover-godot.web.app/games/FluffyHead/FluffyHead.icon.png",
+      githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/FluffyHead",
+    },
+    {
       gameSlug: "Physics",
       title: "That's Physics, that is.",
       intro: "Fling the Pingpong ball around with gestures",
@@ -73,7 +80,6 @@ function App() {
       icon: "https://discover-godot.web.app/games/Bouncy/Bouncy.icon.png",
       githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/Bouncy",
     },
-
     {
       gameSlug: "SlotMachine",
       title: "SlotMachine",
@@ -81,11 +87,10 @@ function App() {
       icon: "https://discover-godot.web.app/games/SlotMachine/SlotMachine.icon.png",
       githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/SlotMachine",
     },
-
     {
       gameSlug: "JsonLoader",
       title: "External Communication",
-      intro: "Save and load JSON. Sort of.",
+      intro: "Save and load JSON. Kind of.",
       icon: "https://discover-godot.web.app/games/JsonLoader/JsonLoader.icon.png",
       githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/JsonLoader",
     },
