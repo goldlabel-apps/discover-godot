@@ -1,31 +1,25 @@
 {
-    "short_name": "listingslab",
-    "name": "listingslab",
+    "short_name": "Crash Course",
+    "name": "Crash Course",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
-
     "icons": [
         {
-            "src": "https://listingslab.com/favicon.ico",
+            "src": "./favicon.ico",
             "sizes": "16x16",
             "type": "image/x-icon"
         },
         {
-            "src": "https://listingslab.com/logo32.png",
+            "src": "./logo32.png",
             "type": "image/png",
             "sizes": "32x32"
         },
         {
-            "src": "https://listingslab.com/logo192.png",
+            "src": "./logo192.png",
             "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "https://listingslab.com/logo512.png",
-            "type": "image/png",
-            "sizes": "512x512",
+            "sizes": "192x192",
             "purpose": "any maskable"
         }
     ]

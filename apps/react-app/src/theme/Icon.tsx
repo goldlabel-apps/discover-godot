@@ -18,6 +18,7 @@ import CMSIcon from '@mui/icons-material/DocumentScanner'
 import FlyIcon from '@mui/icons-material/LocalAirportRounded'
 import DatabaseIcon from '@mui/icons-material/DataObject'
 import MapIcon from '@mui/icons-material/LocationDisabled'
+import NewTabIcon from '@mui/icons-material/OpenInNew'
 import MenuIcon from '@mui/icons-material/Menu'
 import TrashIcon from '@mui/icons-material/DeleteOutlined'
 import VisibilityIcon from '@mui/icons-material/Visibility'
@@ -93,6 +94,10 @@ export default function Icon(props: any) {
         case 'filter':
             iconFragment = <FilterIcon color={color} />
             break
+        case 'newtab':
+            iconFragment = <NewTabIcon color={color} />
+            break
+            
         case 'acc':
             iconFragment = <AccExpandIcon color={color} />
             break

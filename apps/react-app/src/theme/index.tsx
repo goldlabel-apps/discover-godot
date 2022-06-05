@@ -21,3 +21,9 @@ export {
     PingpongballIcon,
     getDesignTokens,
 }
+
+/*
+    borderRadius: 2,
+    border: "1px solid rgba(0,0,0,0.09)",
+    background: "rgba(0,0,0,0.01)",
+*/
