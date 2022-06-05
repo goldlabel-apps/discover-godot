@@ -5,7 +5,7 @@
   "scripts": {
     "test": "cd ./apps/react-app && npm run test",
     "start": "$PWD/.scripts/start",
-    "dist": "npm run build && $PWD/.scripts/dist 1.1.1",
+    "dist": "$PWD/.scripts/dist 1.1.1",
     "serve": "serve dist",
     "lint": "cd ./apps/node-app && npx eslint --ext .js,.ts . --fix",
     "build": "cd ./apps/react-app && npm run build",

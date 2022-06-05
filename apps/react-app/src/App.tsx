@@ -59,12 +59,12 @@ function App() {
               />
               <CardContent>
                 <MenuList>
-                  <ListItem  button onClick={() => { onGameClick("Pingpong") }} >
+                  <ListItem  button onClick={() => { onGameClick("CrashCourse") }} >
                     <ListItemIcon>
                       <Icon icon="newtab" />
                     </ListItemIcon>
                     <ListItemText 
-                      primary="Pingpong"
+                      primary="CrashCourse"
                       secondary="working"
                     />
                   </ListItem>

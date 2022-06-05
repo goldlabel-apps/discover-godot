@@ -38,6 +38,9 @@ mv ./dist/dist ./dist/games/Pingpong
 cp -r ./games/SlotMachine/dist ./dist
 mv ./dist/dist ./dist/games/SlotMachine
 
+cp -r ./games/CrashCourse/dist ./dist
+mv ./dist/dist ./dist/games/CrashCourse
+
 echo ""
 echo "Done! (created version $1)"
 
