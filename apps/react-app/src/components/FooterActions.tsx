@@ -13,9 +13,10 @@ export default function FooterActions() {
                     <Box sx={{ flexGrow: 1}} />
                     <Box>
                         <IconButton
-                        onClick={() => { 
-                            window.open("https://github.com/listingslab-software/discover-godot","_blank")
-                        }}>
+                            sx={{ mr: 3 }}
+                            onClick={() => { 
+                                window.open("https://github.com/listingslab-software/discover-godot","_blank")
+                            }}>
                             <Icon icon="github" color="secondary" />
                         </IconButton>
                     </Box>

@@ -37,7 +37,7 @@ function App() {
 
   const appStyle = {
     margin: "auto",
-    width: 350,
+    maxWidth: 640,
     position: "relative",
   }
 
@@ -51,84 +51,84 @@ function App() {
 
   const themeMode = createTheme(getDesignTokens("light"))
 
+  const items = [
+    {
+      gameSlug: "Textify",
+      title: "Floating Numbers",
+      intro: "Click on the big button to see the numbers fly",
+      icon: "https://discover-godot.web.app/games/Textify/Textify.icon.png",
+      githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/Textify",
+    },
+    {
+      gameSlug: "Physics",
+      title: "That's Physics, that is.",
+      intro: "Fling the Pingpong ball around with gestures",
+      icon: "https://discover-godot.web.app/games/Physics/Physics.icon.png",
+      githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/Physics",
+    },
+    {
+      gameSlug: "Bouncy",
+      title: "Bouncy",
+      intro: "Simple bouncing ball animation",
+      icon: "https://discover-godot.web.app/games/Bouncy/Bouncy.icon.png",
+      githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/Bouncy",
+    },
+
+    {
+      gameSlug: "SlotMachine",
+      title: "SlotMachine",
+      intro: "Not working :(",
+      icon: "https://discover-godot.web.app/games/SlotMachine/SlotMachine.icon.png",
+      githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/SlotMachine",
+    },
+
+    {
+      gameSlug: "JsonLoader",
+      title: "External Communication",
+      intro: "Save and load JSON. Sort of.",
+      icon: "https://discover-godot.web.app/games/JsonLoader/JsonLoader.icon.png",
+      githubUrl: "https://github.com/listingslab-software/discover-godot/tree/master/games/JsonLoader",
+    },
+  ]
+
   return <ThemeProvider theme={themeMode}>
           <CssBaseline />
           <Box sx={ appStyle }>
             <Box sx={{ m: 2}}>
               <Card>
-              <CardHeader
-                avatar={<Avatar src="./logo32.png" />}
-                title="Select Game"
-                
-              />
+                <CardHeader title="Godot" />
                 <MenuList>
 
-                  
-                  
-                  <ListItem  > 
-                    <ListItemAvatar>
-                      <Avatar src="https://discover-godot.web.app/games/Bouncy/Bouncy.icon.png" />
-                    </ListItemAvatar>
-                    <ListItemText 
-                      primary="Bouncy Ball"
-                      secondary="Demonstrates animation and FPS"
-                    />
-                    <ListItemIcon>
-                      <IconButton onClick={() => { onGameClick("Bouncy") }}>
-                        <Icon icon="newtab" />
-                      </IconButton>
-                      <IconButton onClick={() => { onCodeClick("https://github.com/listingslab-software/discover-godot/tree/master/games/Bouncy") }}>
-                        <Icon icon="code" />
-                      </IconButton>
-                    </ListItemIcon>
-                  </ListItem>  
+                  { items.map((item,i) => {
+                    
+                    const { gameSlug, title, intro, githubUrl, icon } = item
 
-                  <ListItem> 
-                    <ListItemAvatar>
-                      <Avatar src="https://discover-godot.web.app/games/JsonLoader/JsonLoader.icon.png"/>
-                    </ListItemAvatar>
-                    <ListItemText 
-                      primary="JSON Loader"
-                    />
-                    <ListItemIcon>
-                      <IconButton onClick={() => { onGameClick("JsonLoader") }}>
-                        <Icon icon="newtab" />
-                      </IconButton>
-                      <IconButton onClick={() => { onCodeClick("https://github.com/listingslab-software/discover-godot/tree/master/games/JsonLoader") }}>
-                        <Icon icon="code" />
-                      </IconButton>
-                    </ListItemIcon>
-                  </ListItem> 
-
-                  <ListItem> 
-                    <ListItemAvatar>
-                      <Avatar src="https://discover-godot.web.app/games/SlotMachine/SlotMachine.icon.png"/>
-                    </ListItemAvatar>
-                    <ListItemText 
-                      primary="Slot Machine"
-                    />
-                    <ListItemIcon>
-                      <IconButton onClick={() => { onGameClick("SlotMachine") }}>
-                        <Icon icon="newtab" />
-                      </IconButton>
-                      <IconButton onClick={() => { onCodeClick("https://github.com/listingslab-software/discover-godot/tree/master/games/SlotMachine") }}>
-                        <Icon icon="code" />
-                      </IconButton>
-                    </ListItemIcon>
-                  </ListItem> 
-
-
+                    return <ListItem key={`game_${i}`} button 
+                              onClick={() => { onGameClick(gameSlug) }}>
+                            <ListItemAvatar>
+                              <Avatar src={ icon } />
+                            </ListItemAvatar>
+                            <ListItemText 
+                              primary={ title }
+                              secondary={ intro}
+                            />
+                            <ListItemIcon>
+                              <IconButton onClick={() => { onCodeClick(githubUrl) }}>
+                                <Icon icon="code" />
+                              </IconButton>
+                            </ListItemIcon>
+                          </ListItem>
+                  }) }
                 </MenuList>
-
                 <FooterActions />
               </Card>
             </Box>
           </Box>
 
           { debuggerOn ? <pre>
-          { JSON.stringify( games.data, null, 2 ) }
+            { JSON.stringify( games.data, null, 2 ) }
           </pre> : null }
-          
+        
         </ThemeProvider>
 }
 
@@ -140,4 +140,9 @@ export default App
                     gameId: "0123",
                     
                   } 
-   */
+  
+  { items.map((item,i) => {
+                  return null;
+                }) }
+  
+                  */
