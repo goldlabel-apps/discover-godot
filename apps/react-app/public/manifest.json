@@ -20,12 +20,7 @@
         {
             "src": "https://listingslab.com/logo192.png",
             "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "https://listingslab.com/logo512.png",
-            "type": "image/png",
-            "sizes": "512x512",
+            "sizes": "192x192",
             "purpose": "any maskable"
         }
     ]

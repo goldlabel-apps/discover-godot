@@ -36,10 +36,8 @@ function App() {
     textAlign: "center",
   }
 
-  
-
   const onGameClick = (game: string) => {
-    window.open( `/games/${game}` ,"_blank")
+    window.open( `/games/${game}/${game}.html` ,"_blank")
   }
 
   return <React.Fragment>

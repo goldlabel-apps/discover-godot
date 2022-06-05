@@ -5,10 +5,11 @@
   "scripts": {
     "test": "cd ./apps/react-app && npm run test",
     "start": "$PWD/.scripts/start",
+    "dist": "npm run build && $PWD/.scripts/dist 1.1.1",
     "serve": "serve dist",
     "lint": "cd ./apps/node-app && npx eslint --ext .js,.ts . --fix",
     "build": "cd ./apps/react-app && npm run build",
-    "dist": "npm run build && $PWD/.scripts/dist 1.1.1",
+    
     "proxy": "cd ./apps/node-app && npm run serve",
     "deploy": "npm run build && npm run dist && firebase deploy"
   },
