@@ -1,17 +1,22 @@
 import React from 'react'
 import { 
-  Box,
-  Button,
-  Typography,
   CssBaseline,
+  Box,
+  Typography,
+  MenuList,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material'
 import {
   useAppSelector,
   useAppDispatch,
 } from "./app/hooks"
 import { selectGames, setGames } from "./features/games/gamesSlice"
+import { Icon } from "./theme"
 
 function App() {
+  const debuggerOn = true
   const games = useAppSelector(selectGames)
   const dispatch = useAppDispatch()
 
@@ -31,25 +36,42 @@ function App() {
     textAlign: "center",
   }
 
-  const debuggerOn = false
+  
+
+  const onGameClick = (game: string) => {
+    window.open( `/games/${game}` ,"_blank")
+  }
 
   return <React.Fragment>
           <CssBaseline />
           <Box sx={ appStyle }>
             <Box sx={{ m: 3, flexGrow:1}}>
-              <Typography variant="h2" gutterBottom>
-                Games
+              <Typography variant="h4" sx={{ fontWeight: "lighter" }} gutterBottom>
+                Play Game
               </Typography>
+              
+              <MenuList>
+                <ListItem button onClick={() => { onGameClick("Pingpong") }} >
+                  <ListItemText 
+                    primary="Pingpong"
+                    secondary="working"
+                  />
+                  <ListItemIcon>
+                    <Icon icon="newtab" />
+                  </ListItemIcon>
+                </ListItem>
 
-              <Button
-                fullWidth
-                variant="contained"
-              >
-              Pingpong
-              </Button>
+                <ListItem button onClick={() => { onGameClick("SlotMachine") }} >
+                  <ListItemText 
+                    primary="Slot Machine"
+                    secondary="broken"
+                  />
+                  <ListItemIcon>
+                    <Icon icon="newtab" />
+                  </ListItemIcon>
+                </ListItem>
+              </MenuList>
             </Box>
-            
-            
           </Box>
 
           { debuggerOn ? <pre>
@@ -61,8 +83,3 @@ function App() {
 
 export default App
 
-/*
-    borderRadius: 2,
-    border: "1px solid rgba(0,0,0,0.09)",
-    background: "rgba(0,0,0,0.01)",
-*/

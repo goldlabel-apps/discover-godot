@@ -1,6 +1,6 @@
 {
   "name": "discover-godot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Godot is a Free and open source 2D and 3D game engine. React is quite good too",
   "scripts": {
     "test": "cd ./apps/react-app && npm run test",
@@ -8,7 +8,7 @@
     "serve": "serve dist",
     "lint": "cd ./apps/node-app && npx eslint --ext .js,.ts . --fix",
     "build": "cd ./apps/react-app && npm run build",
-    "dist": "$PWD/.scripts/dist 1.1.0",
+    "dist": "npm run build && $PWD/.scripts/dist 1.1.1",
     "proxy": "cd ./apps/node-app && npm run serve",
     "deploy": "npm run build && npm run dist && firebase deploy"
   },

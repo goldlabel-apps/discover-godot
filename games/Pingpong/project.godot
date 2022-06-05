@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Pingpong"
-run/main_scene="res://Bouncing.tscn"
+run/main_scene="res://scenes/intro/Bouncing.tscn"
 config/icon="res://png/icon.png"
 
 [physics]

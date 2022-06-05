@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gd/FPSLaabel.gd" type="Script" id=1]
+[ext_resource path="res://png/logo192.png" type="Texture" id=2]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514, 107 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 15.0
+anchor_bottom = 15.0
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 1 )
