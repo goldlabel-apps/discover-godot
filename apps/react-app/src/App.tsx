@@ -25,13 +25,10 @@ function App() {
 
   const appStyle = {
     margin: "auto",
-    display: "flex",
-    borderRadius: 2,
-    textAlign: "center",
-    border: "1px solid rgba(0,0,0,0.09)",
-    background: "rgba(0,0,0,0.01)",
     width: 350,
     height: "100vh",
+    display: "flex",
+    textAlign: "center",
   }
 
   const debuggerOn = false
@@ -63,3 +60,9 @@ function App() {
 }
 
 export default App
+
+/*
+    borderRadius: 2,
+    border: "1px solid rgba(0,0,0,0.09)",
+    background: "rgba(0,0,0,0.01)",
+*/

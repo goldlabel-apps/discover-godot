@@ -7,6 +7,12 @@
 [react-app](https://discover-godot.web.app)
 [Proxy API](https://discover-godot.web.app/api/)
 
+## SlotMachine Blocker
+
+I'm sure that given a little more experience with Godot, this error will be trivial to deal with, but as a newbie it's blocking me running the game. I have had it running at one point, but I can't remember what I did :)
+
+![SlotMachine](./media/mixed-tabs-and-spaces.png)
+
 ## Objectives
 
 1. Games to be deployed as webapps. This means a single directory containing only static assets, usually with an `index.html` at the root level which (hopefully) references it's dependent files properly so that it deploys and runs any where on any server, from apache to the most sophisticated cloud architecture. 
