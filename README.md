@@ -2,13 +2,6 @@
 
 > Godot and React JS are great at doing their own things. Together, can they deliver the Killer Casino App? 
 
-### Godot Crash Course
-
-[React Web App](https://discover-godot.web.app)
-[Bouncy](https://discover-godot.web.app/games/Bouncy)
-[SlotMachine](https://discover-godot.web.app/games/SlotMachine)
-[Proxy API](https://discover-godot.web.app/api/)
-
 ## Objectives
 
 1. Clone repo https://github.com/CadanoX/Godot-Slot-Machine && Get it to compile

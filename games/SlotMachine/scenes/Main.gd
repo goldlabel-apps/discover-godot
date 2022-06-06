@@ -7,7 +7,7 @@ func _ready():
 
 func _on_Roll_button_down():
   if $Roll.text == "Roll":
-  slot.start()
+	slot.start()
 	$Roll.text = "Stop"
   else:
 	slot.stop()
